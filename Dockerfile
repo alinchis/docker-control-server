@@ -4,16 +4,18 @@ FROM node
 MAINTAINER Alin CHIS <alin.d.chis@gmail.com>
 
 # add vue-cli
-RUN npm install --global --silent \
-  bluebird \
+RUN npm install --global --unsafe --silent\
   body-parser \
   cookie-parser \
   debug \
   express \
   morgan \
-  pg-promise \
   pug \
-  serve-favicon
+  serve-favicon \
+  sequelize \
+  pg@6 \
+  pg-hstore \
+  sqlite3
 
 # more stuff...
 
